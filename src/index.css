@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(180deg, #14131B 0%, #08070B 100%);
+  height: 100vh;
+  background-repeat: no-repeat;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 34.3rem;
+  width: auto;
+  margin-inline: auto;
+  color: var(--Almost-White, #E6E5EA);
+}
+
+.checkbox-properties {
+  gap: 1.6rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: #817D92;
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 6rem;
+}
+
+.password {
+  background: var(--Dark-Grey, #24232C);
+  margin-top: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 2rem;
+}
+
+.pass {
+  pointer-events: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #E6E5EA;
+  font-family: 'JetBrains Mono', monospace;
+  width: 40rem;
+}
+
+.copyText {
+  color: var(--Neon-Green, #A4FFAF);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: -2rem;
+  display: block;
+}
+
+.copy {
+  cursor: pointer;
+  width: 17.5px;
+  height: 20px;
+  fill: #A4FFAF;
+  width: 25px;
+  height: 25px;
+}
+
+.copy:hover {
+  fill: white;
+}
+
+.copyButton {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.charLength {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.char-length {
+  color: var(--Almost-White, #E6E5EA);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.show-length {
+  color: var(--Neon-Green, #A4FFAF);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.slider {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  height: 0.8rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: 1.6rem;
+  margin-bottom: 4rem;
+  background-repeat: no-repeat;
+  outline: none;
+  border: none;
+  margin-top: 2rem;
+}
+
+.slider::-webkit-slider-runnable-track {
+  background: var(--Very-Dark-Grey, #18171F);
+  background-size: 30% 100%;
+  width: 100%;
+  height: 8px;
+}
+
+.slider::-webkit-slider-thumb {
+  width: 2.8rem;
+  height: 2.8rem;
+  -webkit-appearance: none;
+  border-radius: 50%;
+  background: var(--Almost-White, #E6E5EA);
+  z-index: 100;
+  margin-top: -10px;
+}
+
+.slider:hover::-webkit-slider-thumb {
+  background: var(--Very-Dark-Grey, #18171F);
+  border: 2px solid var(--Neon-Green, #A4FFAF);
+  -webkit-appearance: none;
+}
+
+.password-card {
+  background: var(--Dark-Grey, #24232C);
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.6rem;
+  padding: 2rem 1.6rem 1.7rem;
+}
+
+.custom-checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: left;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+}
+
+.custom-checkbox-box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--Almost-White, #E6E5EA);
+  margin-right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-checkbox-check img {
+  display: none;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .custom-checkbox-box .custom-checkbox-check img {
+  display: block;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .custom-checkbox-box .custom-checkbox-check {
+  display: block;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox.checked .custom-checkbox-box {
+  border-color: var(--Neon-Green, #A4FFAF);
+  background-color: var(--Neon-Green, #A4FFAF);
+  color: white;
+}
+
+.password-strength {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #18171F;
+  max-width: 311px;
+  height: 5.6rem;
+  padding: 0 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.strengthText {
+  color: var(--Almost-White, #E6E5EA);
+  text-align: right;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.strength p {
+  padding-right: 1.6rem;
+}
+
+.password-strength h2 {
+  color: var(--Grey, #817D92);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.strength {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.bars {
+  border: 2px solid var(--Almost-White, #E6E5EA);
+  width: 1rem;
+  height: 2.8rem;
+}
+
+.too-weak {
+  border: none;
+  background: var(--1---Red, #F64A4A);
+}
+
+.weak {
+  border: none;
+  background: var(--2---Orange, #FB7C58);
+}
+
+.medium {
+  border: none;
+  background: var(--3---Yellow, #F8CD65);
+}
+
+.strong {
+  border: none;
+  background: var(--Neon-Green, #A4FFAF);
+}
+
+.generateBtn {
+  max-width: 311px;
+  width: auto;
+  height: 56px;
+  background: var(--Neon-Green, #A4FFAF);
+  color: var(--Dark-Grey, #24232C);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.generateBtn:hover {
+  background: var(--Dark-Grey, #24232C);
+  border: 2px solid var(--Neon-Green, #A4FFAF);
+  color: var(--Neon-Green, #A4FFAF);
+}
+
+.generateBtn:hover .arrowRight {
+  fill: var(--Neon-Green, #A4FFAF);
+}
+
+.arrowRight {
+  fill: #24232C;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .container {
+    max-width: 54rem;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+    margin-top: 13rem;
+  }
+
+  .password {
+    margin-top: 3.1rem;
+    padding: 1.9rem 2rem;
+  }
+
+  .password-card {
+    padding: 2.4rem 3.2rem 3.2rem;
+  }
+
+  .pass {
+    font-size: 3.2rem;
+  }
+
+  .char-length {
+    font-size: 1.8rem;
+  }
+
+  .show-length {
+    font-size: 32px;
+  }
+
+  .checkbox-properties {
+    font-size: 1.8rem;
+    gap: 1.9rem;
+  }
+
+  .custom-checkbox-box {
+    margin-right: 2.4rem;
+  }
+
+  .custom-checkbox {
+    font-size: 1.8rem;
+  }
+
+  .password-strength {
+    max-width: 476px;
+    height: 7.2rem;
+    padding: 2.5rem 3.2rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .password-strength h2 {
+    font-size: 1.8rem;
+  }
+
+  .strength p {
+    font-size: 2.4rem;
+  }
+
+  .generateBtn {
+    max-width: 476px;
+    height: 6.5rem;
+    gap: 2.4rem;
+    font-size: 1.8rem;
+  }
+
+  .copy {
+    width: 2.1rem;
+    height: 2.4rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  h1 {
+    margin-top: 3rem;
+  }
+  
+  .container {
+    margin-bottom: unset;
+  }
+}
+
+
+
