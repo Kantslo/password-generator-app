@@ -10,10 +10,10 @@
 
 body {
   background: linear-gradient(180deg, #14131B 0%, #08070B 100%);
-  height: 100vh;
   background-repeat: no-repeat;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 700;
+  height: 100%;
 }
 
 .container {
@@ -23,6 +23,7 @@ body {
   width: auto;
   margin-inline: auto;
   color: var(--Almost-White, #E6E5EA);
+  margin-bottom: 6rem;
 }
 
 .checkbox-properties {
@@ -49,7 +50,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.6rem 2rem;
+  padding: 1.6rem 1rem;
 }
 
 .pass {
@@ -63,7 +64,7 @@ h1 {
   line-height: normal;
   color: #E6E5EA;
   font-family: 'JetBrains Mono', monospace;
-  width: 40rem;
+  max-width: 29.5rem;
 }
 
 .copyText {
@@ -313,6 +314,7 @@ h1 {
 
   .container {
     max-width: 54rem;
+    margin-bottom: 20rem;
   }
 
   h1 {
@@ -331,6 +333,7 @@ h1 {
 
   .pass {
     font-size: 3.2rem;
+    max-width: 39rem;
   }
 
   .char-length {
@@ -380,15 +383,16 @@ h1 {
     width: 2.1rem;
     height: 2.4rem;
   }
+
 }
 
 @media only screen and (min-width: 1024px) {
   h1 {
-    margin-top: 3rem;
+    margin-top: 10rem;
   }
   
   .container {
-    margin-bottom: unset;
+    margin-bottom: 20rem;
   }
 }
 
