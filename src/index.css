@@ -13,7 +13,7 @@ body {
   background-repeat: no-repeat;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 700;
-  height: 100%;
+  min-height: 100vh;
 }
 
 .container {
@@ -23,7 +23,6 @@ body {
   width: auto;
   margin-inline: auto;
   color: var(--Almost-White, #E6E5EA);
-  margin-bottom: 6rem;
 }
 
 .checkbox-properties {
@@ -74,7 +73,11 @@ h1 {
   font-weight: 700;
   line-height: normal;
   margin-left: -2rem;
-  display: block;
+  display: none;
+}
+
+.hide-copy-text {
+  display: none;
 }
 
 .copy {
@@ -314,7 +317,7 @@ h1 {
 
   .container {
     max-width: 54rem;
-    margin-bottom: 20rem;
+    margin-bottom: 19.6rem;
   }
 
   h1 {
@@ -384,15 +387,15 @@ h1 {
     height: 2.4rem;
   }
 
+  .copyText {
+    display: block;
+  }
+
 }
 
 @media only screen and (min-width: 1024px) {
   h1 {
     margin-top: 10rem;
-  }
-  
-  .container {
-    margin-bottom: 20rem;
   }
 }
 

@@ -110,8 +110,6 @@ function App() {
     setIncSymbols(!incSymbols);
   };
 
-
-
   return (
     <>
       <div className="container">
@@ -124,7 +122,10 @@ function App() {
             readOnly value={password}
           />
           {isCopied && (
-            <p className="copyText">COPIED</p>
+            <p
+              className="copyText">
+              COPIED
+            </p>
           )}
           <button
             onClick={() => {
@@ -286,7 +287,7 @@ function App() {
             </svg>
           </button>
         </div>
-      </div>
+      </div >
     </>
   )
 }
